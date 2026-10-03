@@ -9,31 +9,31 @@ jobs:
         runs-on: ubuntu-latest
     steps:
         - name: Check out repository
-            uses: actions/checkout@v7
+          uses: actions/checkout@v7
         - name: Set up .NET 10
-            uses: actions/setup-dotnet@v5
-            with:
+          uses: actions/setup-dotnet@v5
+          with:
                 dotnet-version: '10.0.x'
         - name: Restore dependencies
-            run: dotnet restore SOFTEST_INTRO_Labs.sln
+          run: dotnet restore SOFTEST_INTRO_Labs.sln
         - name: Build solution
-            run: >
+          run: >
                 dotnet build SOFTEST_INTRO_Labs.sln
                 --configuration Release --no-restore
         - name: Run tests that do not need a browser
-            run: >
+          run: >
                 dotnet test SOFTEST_INTRO_Labs.sln
                 --configuration Release --no-build
                 --filter "TestCategory!=Browser"
                 --verbosity normal
         - name: Run browser tests
-            shell: bash
-            env:
+          shell: bash
+          env:
                 HEADLESS: "true"
                 SOFTEST_INTRO_BROWSER: "chrome"
                 SOFTEST_INTRO_BASE_URL: http://127.0.0.1:5074
                 ASPNETCORE_URLS: http://127.0.0.1:5074
-            run: |
+          run: |
                 dotnet run \
                     --project SOFTEST_INTRO_Calculator.Web \
                     --configuration Release --no-build \
