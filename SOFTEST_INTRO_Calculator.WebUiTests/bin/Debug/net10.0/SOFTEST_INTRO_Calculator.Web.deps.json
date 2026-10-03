@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SOFTEST_INTRO_Calculator.Web/1.0.0": {
+        "dependencies": {
+          "SOFTEST_INTRO_Calculator": "1.0.0"
+        },
+        "runtime": {
+          "SOFTEST_INTRO_Calculator.Web.dll": {}
+        }
+      },
+      "SOFTEST_INTRO_Calculator/1.0.0": {
+        "runtime": {
+          "SOFTEST_INTRO_Calculator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SOFTEST_INTRO_Calculator.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SOFTEST_INTRO_Calculator/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
